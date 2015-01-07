@@ -33,8 +33,6 @@ HashTable.prototype.betterHash = function(data) {
 		total += (H * data.charCodeAt(i));
 	}
 
-	console.log("betterHash : ", total % this.length);
-
 	return total % this.length;
 };
 	
@@ -71,7 +69,7 @@ HashTable.prototype.get = function(key) {
  */
 HashTable.prototype.showDistro = function() {
 	for (var i = 0, l = this.length; i < l; i++) {
-		if (this.table[i]) {
+		if (this.table[i][0]) {
 			console.log(i + " : " + this.table[i]);
 		}
 	}
